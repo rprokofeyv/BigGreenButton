@@ -2,18 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BigGreenButton"
+             xmlns:converters="clr-namespace:BigGreenButton.Converters"
              x:Class="BigGreenButton.MainPage">
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:WidthToRadiusConverter x:Key="WidthToRadiusConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout VerticalOptions="CenterAndExpand">
         
         <Button
             x:Name="GreenButton"
             HeightRequest ="{Binding Source={x:Reference Name = GreenButton}, Path=Width}"
+            BorderRadius ="{Binding Source={x:Reference Name = GreenButton}, 
+                            Path=Width, 
+                            Converter={StaticResource WidthToRadiusConverter}}"
             BackgroundColor="Green"
             BorderColor="DarkGreen"
             TextColor="LightGreen"
             WidthRequest="160"
-            BorderRadius="80"
             BorderWidth="2"
             HorizontalOptions="Center"
             VerticalOptions="Center"
