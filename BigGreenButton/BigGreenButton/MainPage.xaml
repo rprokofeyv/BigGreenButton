@@ -4,8 +4,18 @@
              xmlns:local="clr-namespace:BigGreenButton"
              x:Class="BigGreenButton.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Button
+            BackgroundColor="Green"
+            BorderColor="DarkGreen"
+            TextColor="LightGreen"
+            WidthRequest="160"
+            HeightRequest="160"
+            BorderRadius="80"
+            BorderWidth="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Хорошо"/>
+    </StackLayout>
 
 </ContentPage>
