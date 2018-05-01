@@ -5,17 +5,20 @@
              x:Class="BigGreenButton.MainPage">
 
     <StackLayout VerticalOptions="CenterAndExpand">
+        
         <Button
+            x:Name="GreenButton"
+            HeightRequest ="{Binding Source={x:Reference Name = GreenButton}, Path=Width}"
             BackgroundColor="Green"
             BorderColor="DarkGreen"
             TextColor="LightGreen"
             WidthRequest="160"
-            HeightRequest="160"
             BorderRadius="80"
             BorderWidth="2"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="Хорошо"/>
+        
     </StackLayout>
 
 </ContentPage>
