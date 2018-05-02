@@ -17,14 +17,16 @@
             BorderRadius ="{Binding Source={x:Reference Name = GreenButton}, 
                             Path=Width, 
                             Converter={StaticResource WidthToRadiusConverter}}"
+            Command="{Binding ButtonClick}"
+            CommandParameter ="{Binding Source={x:Reference Name = GreenButton}, Path=Text}"
             BackgroundColor="Green"
             BorderColor="DarkGreen"
             TextColor="LightGreen"
-            WidthRequest="160"
+            WidthRequest="{Binding ButtonWidth}"
             BorderWidth="2"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="Хорошо"/>
+            Text="{Binding ButtonText}"/>
         
     </StackLayout>
 
